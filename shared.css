@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #fdfdfd;
+  color: #000;
+  font-family: 'Oswald', sans-serif; }
+
+header {
+  padding: 0px 45px;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #025159; }
+
+#site-logo > a {
+  font-size: 25px;
+  color: #90949a; }
+
+nav ul li {
+  display: inline-block;
+  margin: 0px 5px;
+  padding: 10px;
+  font-size: 20px; }
+
+/*# sourceMappingURL=shared.css.map */

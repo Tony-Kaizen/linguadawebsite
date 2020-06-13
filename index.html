@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c268871fdd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="main.css">
+  <title>Página Inicial</title>
+</head>
+
+<body>
+
+  <header>
+    <div id="site-logo">
+      <a href="">
+        <p>LOGO</p>
+      </a>
+    </div>
+    <div id="navegation">
+      <nav>
+        <ul>
+          <li>Inicial</li>
+          <li>Sobre</li>
+          <li>Eventos</li>
+          <li>Galeria</li>
+          <li>Contato</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="wrapper">
+
+    <!-- BANNER SECTION -->
+    <section id="banner">
+      <div class="banner-container">
+        <div class="banner-left">
+          <h1>Bem-vinde ao Linguada</h1>
+          <p>Próximo Evento: 22 Jan 2021</p>
+          <!-- countdown timer -->
+          <div id="event-countdown">
+            <div class="countdown-items-container">
+              <div id="countdown-item-1">
+                <p id="days-countdown-number"></p>
+                <p class="countdown-label">DIAS</p>
+              </div>
+              <div id="countdown-item-2">
+                <p id="hours-countdown-number"></p>
+                <p class="countdown-label">HORAS</p>
+              </div>
+              <div id="countdown-item-3">
+                <p id="minutes-countdown-number"></p>
+                <p class="countdown-label">MINUTOS</p>
+              </div>
+              <div id="countdown-item-4">
+                <p id="seconds-countdown-number"></p>
+                <p class="countdown-label">SEGUNDOS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-right">
+          <img src="/Photos/transparent-logo.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO & COUNTDOWN SECTION -->
+    <!-- <section id="event-info-and-countdown"> -->
+    <!-- Event date & Address -->
+    <!-- <div class="date-address-container">
+        <div class="event-date">
+          <p>22 Jan 2021</p>
+        </div>
+        <div class="event-address">
+          <p>Rua José Adriano Marrey Júnior, 703, Esplanada dos Barreiros, São Vicente</p>
+        </div>
+      </div> -->
+
+    <!-- countdown timer -->
+    <!-- <div id="event-countdown-container">
+        <div class="countdown-items">
+          <div id="countdown-clock"></div>
+        </div>
+
+        <a href="#">pagar ingresso</a>
+      </div> -->
+    <!-- </section> -->
+
+
+    <!-- REASONS TO VISIT SECTION -->
+    <section id="reasons-to-visit">
+      <h2>Pra Que Participar?</h2>
+      <div class="reasons-container">
+        <div class="reason">
+          <h3>Praticar</h3>
+          <img src="/Photos/black-background.jpg" alt="">
+          <p>Sua voz pode ser ouvida! Use-a! De iniciante à avançado, o Linguada é o espaço perfeito para você praticar
+            o idioma que desejar!</p>
+        </div>
+        <div class="reason">
+          <h3>Conectar-se</h3>
+          <img src="/Photos/black-background.jpg" alt="">
+          <p>Conecte-se com pessoas: suas experiências e diferentes culturas! Cada um tem uma história para contar.
+            Compartilhe a sua.Conecte-se com pessoas: suas experiências e diferentes culturas! Cada um tem uma história
+            para contar. Compartilhe a sua.</p>
+        </div>
+        <div class="reason">
+          <h3>Divertir-se</h3>
+          <img src="/Photos/black-background.jpg" alt="">
+          <p>Aqui rola karaokê, jogos e brincadeiras no idioma que você quiser!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTIONS TO EVENT SECTION -->
+    <section id="directions-to-event">
+      <h2>Como Chegar ao Linguada</h2>
+      <div class="directions-to-event-container">
+        <div class="directions-to-event-left">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident suscipit eius adipisci dolorum nostrum,
+            labore molestiae, doloremque officiis iste inventore aliquam fuga neque quisquam culpa aperiam sunt id
+            temporibus error ab accusamus quia. Provident dolores nulla soluta earum. Tenetur facilis velit accusantium
+            reiciendis quidem temporibus expedita natus dignissimos maxime. Consectetur.</p>
+        </div>
+        <div class="directions-to-event-right">
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS SECTION -->
+    <section id="faq">
+      <h2>perguntas frequentes</h2>
+      <div class="faq-container">
+        <button class="accordion">Preciso ter algum nível de fluência no idioma?</button>
+        <div class="panel">
+          <p>VOCÊ PODE SER DE QUALQUER NÍVEL NO IDIOMA - Será super bem-vindx!</p>
+        </div>
+
+        <button class="accordion">Posso levar mais gente?</button>
+        <div class="panel">
+          <p>Claro! Quanto mais gente, melhor :) </p>
+        </div>
+
+        <button class="accordion">Vai ter rango?</button>
+        <div class="panel">
+          <p>Sim! Confiram nosso cardápio no dia do evento.</p>
+        </div>
+      </div>
+    </section> <!-- end of FAQ section -->
+
+    <!-- NEWSLETTER SECTION -->
+    <section id="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-title">
+          <h2>Inscreva-se ao Newsletter</h2>
+          <p>Fique dentro de tudo que está acontecendo com o Linguada e receba dicas valiosas de línguas!</p>
+        </div>
+        <div class="input-container">
+          <input class="newsletter-input" type="text"><button class="newsletter-button"
+            type="submit">INSCREVER-SE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINGUADA FOUNDERS SECTION -->
+    <section id="linguada-founders">
+      <h2>Conheça Os Fundadores</h2>
+      <div class="linguada-founders-container">
+        <!-- Calú Narcizo -->
+        <div class="founder">
+          <img src="/Photos/calu-avatar.jpg" alt="Calú Narcizo" class="image">
+          <div id="myBtn" class="overlay">
+            <div class="text">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <h3>Calú Narcizo</h3>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div>
+              <img src="/Photos/calu-avatar.jpg" alt="Calú Narcizo">
+            </div>
+            <div>
+              <h2>Calú Narcizo</h2>
+              <h4>Co-founder, Language teacher, Poet</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam ab mollitia pariatur voluptatum
+                ipsum
+                eaque inventore odio, quos quidem nulla quis nisi assumenda sunt optio.</p>
+              <div class="modal-host-social-buttons">
+                <a href=""><i class="fab fa-whatsapp"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kauê Alvarez -->
+        <div class="founder">
+          <img src="/Photos/kaue-avatar.jpg" alt="Kauê Alvarez" class="image">
+          <h3>Kauê Alvarez</h3>
+          <div class="overlay">
+            <div class="text">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terceiro Fundador -->
+        <div class="founder">
+          <img src="/Photos/calu-avatar.jpg" alt="" class="image">
+          <h3>Terceiro Fundador</h3>
+          <div class="overlay">
+            <div class="text">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quarto Fundador -->
+        <div class="founder">
+          <img src="/Photos/kaue-avatar.jpg" alt="" class="image">
+          <h3>Quarto Fundador</h3>
+          <div class="overlay">
+            <div class="text">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quinto Fundador -->
+        <div class="founder">
+          <img src="/Photos/calu-avatar.jpg" alt="" class="image">
+          <h3>Quinto Fundador</h3>
+          <div class="overlay">
+            <div class="text">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <img src="/Photos/Projeto-Linguada-logo-black.png" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias minima, sint corporis at sapiente ratione?
+        </p>
+      </div>
+      <div class="footer-box"></div>
+      <div class="footer-box">
+        <h3>Contato</h3>
+        <a href="">Facebook</a>
+        <a href="">Email</a>
+      </div>
+      <div class="footer-box"></div>
+    </div>
+  </footer>
+
+
+  <script src="/Scripts/assets.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_YcHu3nKjjD-En9eEAFclChXVtXInock&callback=initMap">
+    </script>
+  <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXhQFxzeuCjqKrUpWZOJYCxkyQgvSJOK4&callback=initMap">
+    </script> -->
+</body>
+
+</html>
