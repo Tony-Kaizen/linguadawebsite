@@ -11,15 +11,23 @@
 //   }
 // }
 
+#banner {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/Photos/banner-bg-2.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
-.banner-container {
+
+.banner-container-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 525px;
-  background-image: url(/Photos/banner-bg-2.jpg);
-  background-size: cover;
-  background-position: center;
+  // background-image: url(/Photos/banner-bg-2.jpg);
+  // background-size: cover;
+  // background-position: center;
 }
 
 .banner-left {
@@ -28,9 +36,27 @@
   flex-direction: column;
   width: 50%;
   color: #fff;
+  // text-align: center;
 
   h1 {
     font-size: 74px;
+    margin-bottom: 55px;
+  }
+}
+
+.banner-left > div {
+  // padding: 15px 0px 0px 15px;
+  width: 240px;
+  border: 5px solid #dc4720;
+  border-radius: 15px;
+  text-align: center;
+
+  h2 {
+    margin: 15px auto;
+  }
+
+  span {
+    font-size: 64px;
   }
 }
 
@@ -43,9 +69,64 @@
   }
 }
 
+
+.banner-bottom-bg {
+  margin: 50px 100px 75px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+
+  // a {
+  //   background-color: #dc4720;
+  //   color: #fff;
+  //   padding: 20px 30px;
+  //   border-radius: 4px;
+  //   text-decoration: none;
+  // }
+}
+
+#ingresso {
+
+  a {
+  background-color: #dc4720;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  }
+}
+
+#compartilhar {
+  background-color: $main-color;
+  padding: 20px 30px;
+  border-radius: 4px;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    text-decoration: none;
+    // font-size: 18px;
+
+    // i {
+    //   padding-right: 10px;
+    //   font-size: 25px;
+    // }
+
+    // p {
+    //   padding-left: 10px;
+    // }
+  }
+}
+
+
 /* Countdown Timer */
 #event-countdown {
-  margin: 20px 0px 40px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 #event-countdown > p {
@@ -55,7 +136,7 @@
 .countdown-items-container {
   display: flex;
   flex-direction: row;
-  font-size: 40px;
+  font-size: 30px;
   /* margin: 20px auto; */
 }
 
@@ -68,35 +149,35 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: $main-color;
 }
 
 #countdown-item-1 {
-  border: 7px solid #F28D35;
+  border: 7px solid #DC471F;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
 }
 
 #countdown-item-2 {
-  border: 7px solid #FFE200;
+  border: 7px solid $main-color;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
 }
 
 #countdown-item-3 {
   border: 7px solid #DC471F;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
 }
 
 #countdown-item-4 {
-  border: 7px solid #17736A;
+  border: 7px solid $main-color;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
 }
 
 .countdown-label {
@@ -129,7 +210,8 @@
 
 // REASONS TO VISIT SECTION 
 #reasons-to-visit {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  padding: 30px 50px;
 
   h2 {
     color: $main-color;
@@ -141,6 +223,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .reason {
@@ -181,10 +264,10 @@
   padding: 25px;
 }
 
-#map {
-  height: 500px;  /* The height is 400 pixels */
-  width: 100%;  /* The width is the width of the web page */
- }
+/* #map {
+  height: 500px;
+  width: 100%;
+ } */
 // end of directions section
 
 /* FREQUENTLY ASKED QUESTIONS SECTION */
@@ -258,7 +341,7 @@
 
 // NEWSLETTER SECTION
 #newsletter-section {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   height: 325px;
   background-image: url(/Photos/banner-bg.jpg);
   background-size: cover;
@@ -304,18 +387,25 @@
 
 // LINGUADA FOUNDERS SECTION
 #linguada-founders {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  // margin: 0px auto;
+  padding: 30px 50px;
+  background-image: url(/Photos/directions-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 375px;
 
   h2 {
     color: $main-color;
-    font-size: 36px
+    font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
 .linguada-founders-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 
   .founder {
@@ -430,25 +520,3 @@
   text-decoration: none;
   cursor: pointer;
 } /* end of Calu Narcizo modal */
-
-
-// FOOTER SECTION
-#footer {
-  margin-bottom: 50px;
-
-  .footer-container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.footer-box {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-
-  img {
-    width: 200px;
-    height: auto;
-  }
-}
