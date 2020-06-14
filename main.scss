@@ -5,8 +5,18 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-} // @include display-flex();
+}
 
+// @include display-flex();
+
+// 
+// 
+// 
+
+/* #wrapper {
+  width: 90%;
+  margin: 0px auto;
+} */
 
 body {
   background-color: #fdfdfd;
@@ -27,10 +37,8 @@ body {
 }
 
 #banner {
-  @include display-flex();
-  flex: {
-    direction: column;
-  }
+  display: flex;
+  flex-direction: column;
   background-image: url(/Photos/banner-bg-2.jpg);
   background-size: cover;
   background-position: center;
@@ -38,24 +46,20 @@ body {
 
 
 .banner-container-top {
-  @include display-flex();
-  flex: {
-    direction: row;
-  }
   z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 525px;
-  // justify-content: space-between;
   // background-image: url(/Photos/banner-bg-2.jpg);
   // background-size: cover;
   // background-position: center;
 }
 
 .banner-left {
-  @include display-flex();
-  flex: {
-    direction: column;
-  }
   padding: 50px 0px 0px 50px;
+  display: flex;
+  flex-direction: column;
   width: 50%;
   color: #fff;
   // text-align: center;
@@ -96,13 +100,11 @@ body {
 }
 
 .banner-bottom-bg {
-  @include display-flex();
-  flex {
-    direction: row;
-  }
+  margin: 50px 100px 75px 100px;
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 50px 100px 75px 100px;
   background-color: #fff;
   border-radius: 4px;
 
@@ -125,10 +127,8 @@ body {
 }
 
 .countdown-items-container {
-  @include display-flex();
-  flex {
-    direction: row;
-  }
+  display: flex;
+  flex-direction: row;
   font-size: 30px;
   /* margin: 20px auto; */
 }
@@ -138,10 +138,8 @@ body {
 }
 
 #countdown-item-1, #countdown-item-2, #countdown-item-3, #countdown-item-4 {
-  @include display-flex();
-  flex {
-    direction: column;
-  }
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: map-get($colors, main);
@@ -197,16 +195,15 @@ body {
 
 #compartilhar {
   a {
-    @include display-flex();
-    flex {
-      direction: row;
-    }
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     color: #fff;
     text-decoration: none;
     background-color: map-get($colors, main);
     padding: 20px 30px;
     border-radius: 4px;
+    // font-size: 18px;
 
     &:hover {
       background-color: #17736A;
@@ -218,6 +215,29 @@ body {
   }
 } // end of countdown buttons
 
+/* #event-info-and-countdown {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.date-address-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-date {
+  width: 40%;
+}
+
+.event-address {
+  width: 60%;
+}
+
+.event-countdown-container {
+  display: flex;
+  flex-direction: row;
+} */
 
 // REASONS TO VISIT SECTION 
 #reasons-to-visit {
@@ -232,19 +252,15 @@ body {
 }
 
 .reasons-container {
-  @include display-flex();
-  flex: {
-    direction: row;
-  }
+  display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .reason {
-  @include display-flex();
-  flex {
-    direction: column;
-  }
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 33%;
@@ -280,10 +296,8 @@ body {
 }
 
 .directions-to-event-container {
-  @include display-flex();
-  flex: {
-    direction: row;
-  }
+  display: flex;
+  flex: row;
 }
 
 .directions-to-event-left, .directions-to-event-right {
@@ -368,18 +382,17 @@ body {
 
 // NEWSLETTER SECTION
 #newsletter-section {
-  @include display-flex();
-  flex {
-    direction: column;
-  }
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  // margin-bottom: 50px;
   height: 325px;
   background-image: url(/Photos/banner-bg.jpg);
   background-size: cover;
   background-position: center;
-  // margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // color: white;
 
   h2 {
     color: #fff;
@@ -431,10 +444,8 @@ body {
 }
 
 .linguada-founders-container {
-  @include display-flex();
-  flex {
-    direction: row;
-  }
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
@@ -447,6 +458,7 @@ body {
   }
 
   img {
+    // border-radius: 50%;
     width: 175px;
   }
 
