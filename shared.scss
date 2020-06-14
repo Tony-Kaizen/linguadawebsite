@@ -6,12 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #fdfdfd;
-  color: #000;
-  font-family: 'Oswald', sans-serif;
-}
-
 header {
   padding: 0px 45px;
   height: 75px;
@@ -19,7 +13,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: $main-color;
+  color: map-get($colors, main);
 }
 
 #site-logo img {
@@ -45,7 +39,7 @@ nav ul li {
   font-size: 28px;
   border: none;
   outline: none;
-  background-color: $main-color;
+  background-color: map-get($colors, main);
   color: white;
   cursor: pointer;
   padding: 12px 17px 7px 17px;

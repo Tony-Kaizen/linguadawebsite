@@ -1,3 +1,8 @@
-$colors: (main: #025159, secondary: #DC471F);
-
 $main-color: #025159;
+$secondary-color: #DC471F;
+$main-body-text-color: #fff;
+$secondary-body-color: #323232;
+
+$colors: (main: #025159, secondary: #DC471F, main-body: #fff, secondary-body: #323232);
+
+// create variables for font-sizes!

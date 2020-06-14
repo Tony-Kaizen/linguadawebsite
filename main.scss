@@ -1,15 +1,18 @@
 @import "_variables.scss";
 
-/* #wrapper {
-  width: 90%;
-  margin: 0px auto;
-} */
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+} // @include display-flex();
 
-// body {
-//   p {
-//     font-size: 20px;
-//   }
-// }
+
+body {
+  background-color: #fdfdfd;
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+}
 
 #parallax {
   z-index: 0;
@@ -17,11 +20,17 @@
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+
+  .layer {
+    opacity: 0.5;
+  }
 }
 
 #banner {
-  display: flex;
-  flex-direction: column;
+  @include display-flex();
+  flex: {
+    direction: column;
+  }
   background-image: url(/Photos/banner-bg-2.jpg);
   background-size: cover;
   background-position: center;
@@ -29,20 +38,24 @@
 
 
 .banner-container-top {
+  @include display-flex();
+  flex: {
+    direction: row;
+  }
   z-index: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   height: 525px;
+  // justify-content: space-between;
   // background-image: url(/Photos/banner-bg-2.jpg);
   // background-size: cover;
   // background-position: center;
 }
 
 .banner-left {
+  @include display-flex();
+  flex: {
+    direction: column;
+  }
   padding: 50px 0px 0px 50px;
-  display: flex;
-  flex-direction: column;
   width: 50%;
   color: #fff;
   // text-align: center;
@@ -56,7 +69,7 @@
 .banner-left > div {
   // padding: 15px 0px 0px 15px;
   width: 240px;
-  border: 5px solid #dc4720;
+  border: 5px solid map-get($colors, secondary);
   border-radius: 15px;
   text-align: center;
 
@@ -83,11 +96,13 @@
 }
 
 .banner-bottom-bg {
-  margin: 50px 100px 75px 100px;
-  display: flex;
-  flex-direction: row;
+  @include display-flex();
+  flex {
+    direction: row;
+  }
   justify-content: space-evenly;
   align-items: center;
+  margin: 50px 100px 75px 100px;
   background-color: #fff;
   border-radius: 4px;
 
@@ -110,8 +125,10 @@
 }
 
 .countdown-items-container {
-  display: flex;
-  flex-direction: row;
+  @include display-flex();
+  flex {
+    direction: row;
+  }
   font-size: 30px;
   /* margin: 20px auto; */
 }
@@ -121,36 +138,38 @@
 }
 
 #countdown-item-1, #countdown-item-2, #countdown-item-3, #countdown-item-4 {
-  display: flex;
-  flex-direction: column;
+  @include display-flex();
+  flex {
+    direction: column;
+  }
   justify-content: center;
   align-items: center;
-  color: $main-color;
+  color: map-get($colors, main);
 }
 
 #countdown-item-1 {
-  border: 7px solid #DC471F;
+  border: 7px solid map-get($colors, secondary);
   border-radius: 50%;
   width: 110px;
   height: 110px;
 }
 
 #countdown-item-2 {
-  border: 7px solid $main-color;
+  border: 7px solid map-get($colors, main);
   border-radius: 50%;
   width: 110px;
   height: 110px;
 }
 
 #countdown-item-3 {
-  border: 7px solid #DC471F;
+  border: 7px solid map-get($colors, secondary);
   border-radius: 50%;
   width: 110px;
   height: 110px;
 }
 
 #countdown-item-4 {
-  border: 7px solid $main-color;
+  border: 7px solid map-get($colors, main);
   border-radius: 50%;
   width: 110px;
   height: 110px;
@@ -164,7 +183,7 @@
 // Countdown buttons 
 #ingresso {
   a {
-  background-color: #dc4720;
+  background-color: map-get($colors, secondary);
   color: #fff;
   padding: 20px 30px;
   border-radius: 4px;
@@ -178,15 +197,16 @@
 
 #compartilhar {
   a {
-    display: flex;
-    flex-direction: row;
+    @include display-flex();
+    flex {
+      direction: row;
+    }
     justify-content: space-between;
     color: #fff;
     text-decoration: none;
-    background-color: $main-color;
+    background-color: map-get($colors, main);
     padding: 20px 30px;
     border-radius: 4px;
-    // font-size: 18px;
 
     &:hover {
       background-color: #17736A;
@@ -198,29 +218,6 @@
   }
 } // end of countdown buttons
 
-/* #event-info-and-countdown {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-}
-
-.date-address-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.event-date {
-  width: 40%;
-}
-
-.event-address {
-  width: 60%;
-}
-
-.event-countdown-container {
-  display: flex;
-  flex-direction: row;
-} */
 
 // REASONS TO VISIT SECTION 
 #reasons-to-visit {
@@ -228,22 +225,26 @@
   padding: 30px 50px;
 
   h2 {
-    color: $main-color;
+    color: map-get($colors, main);
     font-size: 36px;
     margin-bottom: 50px;    
   }
 }
 
 .reasons-container {
-  display: flex;
-  flex-direction: row;
+  @include display-flex();
+  flex: {
+    direction: row;
+  }
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .reason {
-  display: flex;
-  flex-direction: column;
+  @include display-flex();
+  flex {
+    direction: column;
+  }
   justify-content: center;
   align-items: center;
   width: 33%;
@@ -273,14 +274,16 @@
   // background-position: center;
 
   h2 {
-    color: $main-color;
+    color: map-get($colors, main);
     font-size: 36px
   }
 }
 
 .directions-to-event-container {
-  display: flex;
-  flex: row;
+  @include display-flex();
+  flex: {
+    direction: row;
+  }
 }
 
 .directions-to-event-left, .directions-to-event-right {
@@ -307,7 +310,7 @@
     text-transform: uppercase;
     text-align: center;
     font-size: 50px;
-    color: $main-color;
+    color: map-get($colors, main);
   }
 }
 
@@ -317,7 +320,7 @@
 }
 
 .accordion {
-  background-color: $main-color;
+  background-color: map-get($colors, main);
   color: #fff;
   cursor: pointer;
   padding: 18px;
@@ -349,7 +352,7 @@
 
 .panel {
   padding: 0 18px;
-  background-color: #DC471F;
+  background-color: map-get($colors, secondary);
   color: #fff;
   max-height: 0;
   overflow: hidden;
@@ -365,17 +368,18 @@
 
 // NEWSLETTER SECTION
 #newsletter-section {
-  // margin-bottom: 50px;
+  @include display-flex();
+  flex {
+    direction: column;
+  }
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   height: 325px;
   background-image: url(/Photos/banner-bg.jpg);
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  // color: white;
+  // margin-bottom: 50px;
 
   h2 {
     color: #fff;
@@ -400,9 +404,9 @@
   
     .newsletter-button {
       padding: 15px 20px;
-      background-color: #DC471F;
+      background-color: map-get($colors, secondary);
       color: #fff;
-      border: solid #DC471F;
+      border: solid map-get($colors, secondary);
       border-radius: 0px 5px 5px 0px;
     }
   }  
@@ -420,15 +424,17 @@
   height: 375px;
 
   h2 {
-    color: $main-color;
+    color: map-get($colors, main);
     font-size: 36px;
     margin-bottom: 50px;
   }
 }
 
 .linguada-founders-container {
-  display: flex;
-  flex-direction: row;
+  @include display-flex();
+  flex {
+    direction: row;
+  }
   justify-content: space-between;
   align-items: center;
 
@@ -441,7 +447,6 @@
   }
 
   img {
-    // border-radius: 50%;
     width: 175px;
   }
 
@@ -455,7 +460,7 @@
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: $main-color;
+    background-color: map-get($colors, main);
     // border-radius: 50%;
   }
 
@@ -495,7 +500,6 @@
 .modal-content {
   background-color: #fefefe;
   margin: 40px 125px 0px 125px;
-  // padding: 20px;
   border: 1px solid #888;
   width: 80%;
   position: absolute;
