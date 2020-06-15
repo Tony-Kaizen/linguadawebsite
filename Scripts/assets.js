@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 5, 2020 20:30:00").getTime();
+var countDownDate = new Date("Jan 22, 2021 20:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -100,7 +100,7 @@ var scrollButton = document.getElementById("scrollBtn");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+  if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
     scrollButton.style.display = "block";
   } else {
     scrollButton.style.display = "none";
@@ -112,3 +112,42 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+/* SCROLL TEST */
+window.requestAnimFrame = (function () {
+  return window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    function (callback) {
+      window.setTimeout(callback, 1000 / 60);
+    };
+})();
+
+function scrollToY(o, n) {
+  function a() { t += 1 / 60; var n = t / c, l = i(n); 1 > n ? (requestAnimFrame(a), window.scrollTo(0, r + (o - r) * l)) : window.scrollTo(0, o) }
+
+  var r = window.scrollY, o = o || 0, n = n || 2e3, t = 0, c = Math.max(.1, Math.min(Math.abs(r - o) / n, .8)), i = function (o) { return -.5 * (Math.cos(Math.PI * o) - 1) }; a()
+}
+// active smooth scroll pour les a[href^="#anchor-"]
+!function () {
+  var el;
+  var _scrollToY = function (event) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+    var el = event.target || event.originalTarget || event.srcElement;
+    var name = (el.getAttribute("href") || el.href).slice(1);
+    el = document.getElementsByName(name);
+    if (el.length > 0) {
+      scrollToY(el[0].offsetTop, 1500);
+      return false;
+    }
+  }
+  for (var a = document.querySelectorAll('a[href^="#anchor-"]'), i = 0; i < a.length; i++) {
+    el = a[i];
+    if (el.addEventListener) {
+      el.addEventListener('click', _scrollToY, false);
+    } else if (el.attachEvent) {
+      el.attachEvent('onclick', _scrollToY);
+    }
+  }
+}();

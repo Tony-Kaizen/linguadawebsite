@@ -1,11 +1,12 @@
+@font-face {
+  font-family: typographPro;
+  src: url(/Typograph/TYPOGRAPH\ PRO\ Light.ttf); }
 /* #wrapper {
   width: 90%;
   margin: 0px auto;
 } */
 body {
-  background-color: #fdfdfd;
-  color: #000;
-  font-family: 'Oswald', sans-serif; }
+  font-family: typographPro; }
 
 #parallax {
   z-index: 0;
@@ -14,21 +15,19 @@ body {
   height: 100%;
   overflow-x: hidden; }
   #parallax .layer {
-    opacity: 0.5; }
+    opacity: 0.3; }
 
 #banner {
   display: flex;
   flex-direction: column;
-  background-image: url(/Photos/banner-bg-2.jpg);
-  background-size: cover;
-  background-position: center; }
+  background-color: #000; }
 
 .banner-container-top {
   z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 525px; }
+  height: 600px; }
 
 .banner-left {
   padding: 50px 0px 0px 50px;
@@ -38,17 +37,16 @@ body {
   color: #fff; }
   .banner-left h1 {
     font-size: 74px;
-    margin-bottom: 55px; }
+    margin-bottom: 35px; }
 
-.banner-left > div {
-  width: 240px;
-  border: 5px solid #DC471F;
+.date-container {
+  width: 85%;
+  border: 5px solid #D10900;
   border-radius: 15px;
-  text-align: center; }
-  .banner-left > div h2 {
-    margin: 15px auto; }
-  .banner-left > div span {
-    font-size: 64px; }
+  text-align: center;
+  padding: 15px 0px 10px 0px; }
+  .date-container h3 {
+    font-size: 54px; }
 
 .banner-right {
   width: 50%;
@@ -56,21 +54,9 @@ body {
   .banner-right img {
     height: 100%; }
 
-.banner-container-bottom {
-  z-index: 1; }
-
-.banner-bottom-bg {
-  margin: 50px 100px 75px 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 4px; }
-
 /* Countdown Timer */
 #event-countdown {
-  margin: 20px 0px 20px 0px; }
+  margin: 30px 0px 30px 0px; }
 
 #event-countdown > p {
   font-size: 25px; }
@@ -78,39 +64,38 @@ body {
 .countdown-items-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   font-size: 30px;
+  width: 85%;
   /* margin: 20px auto; */ }
-
-.countdown-items-container div {
-  margin: 0px 10px; }
 
 #countdown-item-1, #countdown-item-2, #countdown-item-3, #countdown-item-4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #025159; }
+  color: #fff; }
 
 #countdown-item-1 {
-  border: 7px solid #DC471F;
+  border: 5px solid #59af3b;
   border-radius: 50%;
   width: 110px;
   height: 110px; }
 
 #countdown-item-2 {
-  border: 7px solid #025159;
+  border: 5px solid #e5c002;
   border-radius: 50%;
   width: 110px;
   height: 110px; }
 
 #countdown-item-3 {
-  border: 7px solid #DC471F;
+  border: 5px solid #1b64cc;
   border-radius: 50%;
   width: 110px;
   height: 110px; }
 
 #countdown-item-4 {
-  border: 7px solid #025159;
+  border: 5px solid #d6580e;
   border-radius: 50%;
   width: 110px;
   height: 110px; }
@@ -119,56 +104,66 @@ body {
   font-size: 14px; }
 
 /* end of countdown timer */
-#ingresso a {
-  background-color: #DC471F;
+#banner-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 85%;
+  font-size: 18px; }
+
+#ingresso {
+  background-color: #D10900;
   color: #fff;
-  padding: 20px 30px;
+  padding: 20px 20px;
   border-radius: 4px;
   text-decoration: none; }
-  #ingresso a:hover {
+  #ingresso:hover {
     background-color: #f44f24; }
 
-#compartilhar a {
+#compartilhar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #D10900;
   color: #fff;
+  border-radius: 4px;
   text-decoration: none;
-  background-color: #025159;
-  padding: 20px 30px;
-  border-radius: 4px; }
-  #compartilhar a:hover {
-    background-color: #17736A; }
-  #compartilhar a i {
+  padding: 20px 30px; }
+  #compartilhar i {
     margin-right: 10px; }
 
-/* #event-info-and-countdown {
+#how-it-works {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-}
+  background-color: #323232;
+  padding: 75px 50px; }
+  #how-it-works h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 50px; }
 
-.date-address-container {
+.how-it-works-content-box {
   display: flex;
   flex-direction: row;
-}
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 50px; }
+  .how-it-works-content-box div {
+    width: 50%; }
+  .how-it-works-content-box h3 {
+    font-size: 26px;
+    margin-bottom: 25px; }
+  .how-it-works-content-box img {
+    margin: 0px 75px;
+    height: 300px;
+    width: 75%; }
 
-.event-date {
-  width: 40%;
-}
-
-.event-address {
-  width: 60%;
-}
-
-.event-countdown-container {
-  display: flex;
-  flex-direction: row;
-} */
 #reasons-to-visit {
-  padding: 30px 50px; }
+  padding: 75px 50px;
+  background-color: #000; }
   #reasons-to-visit h2 {
-    color: #025159;
+    color: #fff;
     font-size: 36px;
     margin-bottom: 50px; }
 
@@ -186,51 +181,55 @@ body {
   width: 33%;
   padding: 0px 15px; }
   .reason h3 {
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    color: #fff; }
   .reason img {
     width: 100%;
     margin-bottom: 15px; }
   .reason p {
-    font-size: 18px; }
+    font-size: 18px;
+    color: #fff; }
 
 #directions-to-event {
-  height: 700px; }
+  padding: 75px 50px;
+  height: 750px;
+  background-color: #323232;
+  color: #fff; }
   #directions-to-event h2 {
-    color: #025159;
+    margin-bottom: 50px;
+    color: #fff;
     font-size: 36px; }
 
 .directions-to-event-container {
   display: flex;
-  flex: row; }
+  flex: row;
+  justify-content: space-between; }
 
 .directions-to-event-left, .directions-to-event-right {
-  width: 50%;
-  padding: 25px; }
+  width: 48%; }
 
-/* #map {
+#map {
   height: 500px;
-  width: 100%;
- } */
+  width: 100%; }
+
 /* FREQUENTLY ASKED QUESTIONS SECTION */
 #faq {
   margin: 0px auto;
-  padding: 50px;
-  background-image: url(/Photos/directions-bg.jpg);
-  background-size: cover;
-  background-position: center;
+  padding: 75px 50px;
+  background-color: #000;
   height: 450px; }
   #faq h2 {
     text-transform: uppercase;
     text-align: center;
     font-size: 50px;
-    color: #025159; }
+    color: #fff; }
 
 .faq-container {
   margin: 30px auto 30px;
   width: 70%; }
 
 .accordion {
-  background-color: #025159;
+  background-color: #D10900;
   color: #fff;
   cursor: pointer;
   padding: 18px;
@@ -244,7 +243,7 @@ body {
   text-transform: uppercase; }
 
 .active, .accordion:hover {
-  background-color: #17736A; }
+  background-color: #9E0800; }
 
 .accordion:after {
   content: '\002B';
@@ -258,7 +257,7 @@ body {
 
 .panel {
   padding: 0 18px;
-  background-color: #DC471F;
+  background-color: #000;
   color: #fff;
   max-height: 0;
   overflow: hidden;
@@ -269,10 +268,9 @@ body {
   font-size: 18px; }
 
 #newsletter-section {
+  padding: 75px 50px;
   height: 325px;
-  background-image: url(/Photos/banner-bg.jpg);
-  background-size: cover;
-  background-position: center;
+  background-color: #323232;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -294,19 +292,16 @@ body {
       border-radius: 5px 0px 0px 5px; }
     #newsletter-section .input-container .newsletter-button {
       padding: 15px 20px;
-      background-color: #DC471F;
+      background-color: #D10900;
       color: #fff;
-      border: solid #DC471F;
+      border: solid #D10900;
       border-radius: 0px 5px 5px 0px; }
 
 #linguada-founders {
-  padding: 30px 50px;
-  background-image: url(/Photos/directions-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 375px; }
+  padding: 75px 50px;
+  background-color: #000; }
   #linguada-founders h2 {
-    color: #025159;
+    color: #fff;
     font-size: 36px;
     margin-bottom: 50px; }
 
@@ -318,6 +313,7 @@ body {
   .linguada-founders-container .founder {
     position: relative; }
   .linguada-founders-container h3 {
+    color: #fff;
     text-align: center; }
   .linguada-founders-container img {
     width: 175px; }
@@ -327,11 +323,11 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 87.5%;
+    height: 88%;
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #025159; }
+    background-color: #D10900; }
   .linguada-founders-container .founder:hover .overlay {
     opacity: .7; }
   .linguada-founders-container .text {
@@ -375,6 +371,18 @@ body {
   left: 0;
   display: flex;
   flex-direction: row; }
+  .modal-content h3 {
+    text-align: left;
+    font-size: 35px;
+    margin: 10px 0px 15px 0px;
+    color: #000; }
+  .modal-content h4 {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 30px; }
+  .modal-content p {
+    text-align: justify;
+    margin-bottom: 50px; }
   .modal-content img {
     width: 100%;
     border-radius: 0; }

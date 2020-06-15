@@ -13,6 +13,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #000;
   color: map-get($colors, main);
 }
 
@@ -22,9 +23,13 @@ header {
 
 nav ul li {
   display: inline-block;
-  margin: 0px 5px;
-  padding: 10px;
+  // margin: 0px 5px;
+  padding: 20px;
   font-size: 20px;
+
+  &:hover {
+    color: map-get($colors, main-body);
+  }
 } 
 // end of header
 
@@ -34,29 +39,30 @@ nav ul li {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 20px;
   z-index: 999;
   font-size: 28px;
   border: none;
   outline: none;
-  background-color: map-get($colors, main);
+  background-color: map-get($colors, main-body);
   color: white;
   cursor: pointer;
-  padding: 12px 17px 7px 17px;
+  padding: 10px 15px 0px 15px;
   border-radius: 4px;
 }
 
 #scrollBtn:hover {
-  background-color: #17736A;
+  background-color: #9E0800;
 }
 // end of scroll to top button
 
 // FOOTER SECTION
 #footer {
   padding: 25px 0px 40px 0px;
-  background-image: url(/Photos/banner-bg-2.jpg);
-  background-size: cover;
-  background-position: center;
+  background-color: map-get($colors, secondary-body);
+  // background-image: url(/Photos/banner-bg-2.jpg);
+  // background-size: cover;
+  // background-position: center;
   color: #fff;
 
   .footer-container {
@@ -88,6 +94,10 @@ nav ul li {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+
+    &:hover {
+      color: map-get($colors, main-body);
+    }
   }
 }
 
