@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  font-family: typographPro; }
+
 header {
   padding: 0px 45px;
   height: 75px;
